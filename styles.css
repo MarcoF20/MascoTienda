@@ -1,0 +1,20 @@
+body{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 10px;
+}
+.nav-link, .navbar-brand{
+  color: #404146;
+}
+.nav-link:hover, .navbar-brand:hover{
+  color: #07A081;
+}
+.navbar-brand{
+  font-family: 'Cabin', sans-serif;
+  font-size: 1.6em;
+}
+.nav-link{
+  font-family: 'Lato', sans-serif;
+  font-size: 1.6em;  
+}

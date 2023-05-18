@@ -108,3 +108,22 @@ h3 {
   width: 164px;
   height: 46px;
 }
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+  background: rgba(42, 99, 214, 0.74) !important;
+}
+/* *{
+  outline: 1px solid red !important;
+} */
+.form-label{
+  font-size: 1.6em;
+  font-family: 'Lato', sans-serif;;
+}
+.send-form{
+  width: 100%;
+  background-color: rgba(243, 15, 70, 0.54);
+  box-shadow: 0px 3px 8px rgba(136, 144, 194, 0.25), 0px 7px 21px rgba(37, 44, 97, 0.2);
+  border-radius: 4px;
+}
+.send-form:hover, .send-form:focus, .send-form:active{
+  background-color: rgba(243, 15, 70, 0.74) !important;
+}

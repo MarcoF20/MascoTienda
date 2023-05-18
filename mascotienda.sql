@@ -33,3 +33,29 @@ CREATE TABLE direcciones (
   creado_en TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (id)
 );
+-- Tabla de productos
+CREATE TABLE productos (
+  id_producto INT PRIMARY KEY,
+  nombre VARCHAR(100),
+  marca VARCHAR(50),
+  precio DECIMAL(10, 2),
+  codigo_sat VARCHAR(10),
+  inventario INT,
+  codigo_producto VARCHAR(20),
+  foto VARCHAR(255)
+);
+
+-- Tabla de categorías
+CREATE TABLE categorias (
+  id_categoria INT PRIMARY KEY,
+  nombre VARCHAR(50)
+);
+
+-- Tabla intermedia productos_categorias
+CREATE TABLE productos_categorias (
+  id_producto_categoria INT PRIMARY KEY,
+  id_producto INT,
+  id_categoria INT,
+  FOREIGN KEY (id_producto) REFERENCES productos(id_producto),
+  FOREIGN KEY (id_categoria) REFERENCES categorias(id_categoria)
+);

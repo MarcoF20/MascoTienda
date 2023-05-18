@@ -1,21 +1,50 @@
 <!doctype html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MascoTienda - Inicio</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cabin&family=Lato:wght@300;400&family=Poppins&display=swap" rel="stylesheet">
-</head>
+<?php require("./Fragments/head.php") ?>
 
 <body>
-  <?php include_once('./components/navbar.php') ?>
+  <!-- Importing navigation bar -->
+  <?php require('./Fragments/navbar.php') ?>
+  <div id="video_container">
+    <video autoplay loop muted>
+      <source src="./images/banner for website.mp4" type="video/mp4">
+    </video>
+  </div>
+  <h2 class="text-center" class="content_title">Elige la categoria</h2>
+  <p class="text-center">Elige para que mascota quieres comprar o bien busca entre todos nuestros productos</p>
+  <div class="container">
+    <div class="row category_row" style="display:flex; justify-content:space-between;">
+      <div class="col-2 text-center category">
+        <img src="./images/cat_category.jpg" alt="Gatos" class="category_image">
+        <h3>Gatos</h3>
+      </div>
+      <div class="col-2 text-center category">
+        <img src="./images/fish_category.jpg" alt="Peces" class="category_image">
+        <h3>Peces</h3>
+      </div>
+      <div class="col-2 text-center category">
+        <img src="./images/dog_category.jpg" alt="Juguetes" class="category_image">
+        <h3>Perros</h3>
+      </div>
+      <div class="col-2 text-center category">
+        <img src="./images/toys_category.jpg" alt="Perros" class="category_image">
+        <h3>Juguetes</h3>
+      </div>
+      <div class="col-2 text-center category">
+        <img src="./images/food_category.jpg" alt="Comida" class="category_image">
+        <h3>Comida</h3>
+      </div>
+    </div>
+  </div>
+  <h2 class="content_title text-center mt-3">Todos los productos</h2>
+
+  <!-- PRODUCTOS -->
+  <!-- import products fragment -->
+  <?php require('./Fragments/products.php') ?>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/4b777ceb0e.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

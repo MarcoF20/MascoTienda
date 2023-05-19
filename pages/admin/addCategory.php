@@ -13,17 +13,17 @@
       border-radius: 27px;
       border-color: #404146;
     ">
-      <a href="#" class="nav-link" style="margin-left: 14px;">Categoria</a>
-      <a href="#" class="nav-link" style="margin-right: 14px;">Productos</a>
+      <a href="./addCategory.php" class="nav-link" style="margin-left: 14px;">Categoría</a>
+      <a href="./addProduct.php" class="nav-link" style="margin-right: 14px;">Productos</a>
     </div>
   </div>
 <div class="formContainer d-flex justify-content-center">
 <form style="min-width: 406px;" class="mt-3">
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Nombre de la categoria</label>
+  <div class="mb-3 vstack gap-2">
+    <label for="exampleInputEmail1" class="form-label">Nombre de la categoría</label>
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
-  <button type="submit" class="btn btn-primary send-form">Submit</button>
+  <button type="submit" class="btn btn-primary send-form">Añadir categoría</button>
 </form>
 </div>
 

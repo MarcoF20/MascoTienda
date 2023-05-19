@@ -27,10 +27,10 @@
       </form>
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-5 ms-auto">
         <li class="nav-item">
-          <a href="#" class="nav-link"><i class="fas fa-regular fa-cart-shopping" style="color: #07a081;"></i></a>
+          <a href="#" class="nav-link"><i class="fas fa-regular fa-cart-shopping" style="color: #07a081;"></i> Carrito</a>
         </li>
         <li class="nav-item mx">
-          <a href="#" class="nav-link"><i class="fas fa-user" style="color:#000000"></i></a>
+          <a href="#" class="nav-link"><i class="fas fa-user" style="color:#000000"></i> Perfil</a>
         </li>
       </ul>
     </div>

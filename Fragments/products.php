@@ -1,4 +1,4 @@
-<div class="container mt-5">
+<div class="container mt-3">
   <div class="row d-flex" id="products_row">
     <div class="col-3">
       <div class="card" style="width: 18rem;">

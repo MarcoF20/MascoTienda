@@ -20,20 +20,22 @@
 <div class="formContainer d-flex justify-content-center">
 <form style="min-width: 406px;" class="mt-3">
   <div class="mb-3 vstack gap-2">
-    <label for="exampleInputEmail1" class="form-label">Nombre del producto</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <label for="exampleInputEmail1" class="form-label">Categoría(s)</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <label for="exampleInputEmail1" class="form-label">Marca</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <label for="exampleInputEmail1" class="form-label">Precio</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <label for="exampleInputEmail1" class="form-label">Código SAT</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <label for="exampleInputEmail1" class="form-label">Inventario</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <label for="exampleInputEmail1" class="form-label">Código de producto</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <label for="productName" class="form-label">Nombre del producto</label>
+    <input type="text" class="form-control" id="productName" aria-describedby="productNameHelp" name="productName">
+    <label for="category" class="form-label">Categoría(s)</label>
+    <input type="text" class="form-control" id="category_input" aria-describedby="categoryHelp" name="category">
+    <label for="brand" class="form-label">Marca</label>
+    <input type="text" class="form-control" id="brand" aria-describedby="brandHelp" name="brand">
+    <label for="price" class="form-label">Precio</label>
+    <input type="number" class="form-control" id="price" aria-describedby="priceHelp" name="price" min="1">
+    <label for="satCode" class="form-label">Código SAT</label>
+    <input type="text" class="form-control" id="satCode" aria-describedby="satCodeHelp" name="satCode">
+    <label for="stock" class="form-label">Inventario</label>
+    <input type="number" class="form-control" id="stock" aria-describedby="stockHelp">
+    <label for="sku" class="form-label">Código de producto</label>
+    <input type="text" class="form-control" id="sku" aria-describedby="skuHelp" name="sku">
+    <label for="image" class="form-label">Imágen del producto</label>
+    <input type="file" class="form-control" id="imageInput" aria-describedby="imageHelp" name="image">
   </div>
   <button type="submit" class="btn btn-primary send-form">Añadir producto</button>
 </form>

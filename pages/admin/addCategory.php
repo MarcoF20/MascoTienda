@@ -20,8 +20,8 @@
 <div class="formContainer d-flex justify-content-center">
 <form style="min-width: 406px;" class="mt-3">
   <div class="mb-3 vstack gap-2">
-    <label for="exampleInputEmail1" class="form-label">Nombre de la categoría</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <label for="categoryName" class="form-label">Nombre de la categoría</label>
+    <input type="text" class="form-control" id="category_name" aria-describedby="categoryNameHelp" name="categoryName">
   </div>
   <button type="submit" class="btn btn-primary send-form">Añadir categoría</button>
 </form>

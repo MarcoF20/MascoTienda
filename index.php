@@ -37,7 +37,7 @@
       </div>
     </div>
   </div>
-  <h2 class="content_title text-center mt-3">Todos los productos</h2>
+  <h2 class="content_title text-center mt-5">Todos los productos</h2>
 
   <!-- PRODUCTOS -->
   <!-- import products fragment -->

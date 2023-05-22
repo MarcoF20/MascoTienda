@@ -1,4 +1,4 @@
-<div class="container mt-3">
+<div class="container mt-3" id="productRowContainer">
   <div class="row d-flex" id="products_row">
     <div class="col-3">
       <div class="card" style="width: 18rem;">
@@ -6,7 +6,7 @@
         <div class="card-body text-center">
           <h5 class="card-title">Peluche elefante</h5>
           <p class="card-text">$269</p>
-          <a href="#" class="btn btn-primary">Agregar al carrito</a>
+          <a href="./pages/products/product.php" class="btn btn-primary">Ver mas</a>
         </div>
       </div>
     </div>
@@ -16,7 +16,7 @@
         <div class="card-body text-center">
           <h5 class="card-title">Peluche elefante</h5>
           <p class="card-text">$269</p>
-          <a href="#" class="btn btn-primary">Agregar al carrito</a>
+          <a href="./pages/products/product.php" class="btn btn-primary">Ver mas</a>
         </div>
       </div>
     </div>
@@ -26,7 +26,7 @@
         <div class="card-body text-center">
           <h5 class="card-title">Peluche elefante</h5>
           <p class="card-text">$269</p>
-          <a href="#" class="btn btn-primary">Agregar al carrito</a>
+          <a href="./pages/products/product.php" class="btn btn-primary">Ver mas</a>
         </div>
       </div>
     </div>
@@ -36,7 +36,7 @@
         <div class="card-body text-center">
           <h5 class="card-title">Peluche elefante</h5>
           <p class="card-text">$269</p>
-          <a href="#" class="btn btn-primary">Agregar al carrito</a>
+          <a href="./pages/products/product.php" class="btn btn-primary">Ver mas</a>
         </div>
       </div>
     </div>

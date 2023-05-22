@@ -4,10 +4,13 @@ body {
   box-sizing: border-box;
   font-size: 10px;
   font-family: "Lato", sans-serif;
+  color: #3d3d3d;
+  scroll-behavior: smooth;
 }
 .nav-link,
 .navbar-brand {
   color: #404146;
+  transition: color ease-in-out 0.2s;
 }
 .nav-link:hover,
 .navbar-brand:hover {
@@ -67,6 +70,13 @@ p {
   .category_row {
     justify-content: center !important;
   }
+  #products_row {
+    flex-direction: column;
+  }
+  #productRowContainer{
+    display: flex;
+    justify-content: center;
+  }
 }
 
 h3 {
@@ -74,17 +84,27 @@ h3 {
   font-size: 2.4em;
 }
 .category {
-  width: 259px;
+  width: 230px;
   background: linear-gradient(
     93.45deg,
     rgba(7, 160, 129, 0.4) 7.83%,
-    rgba(255, 255, 255, 0) 100%
+    rgba(235, 223, 223, 0.349) 100%
   );
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 22px 0 0 22px;
   height: 87px;
   display: flex;
   align-items: center;
+  transition: 0.5s;
+}
+.category:hover{
+  background: linear-gradient(
+    93.45deg,
+    rgba(128, 203, 177, 0.4) 7.83%,
+    rgba(255, 255, 255, 0.349) 100%
+    );
+    
+  cursor: pointer;
 }
 .category_image {
   width: 70px;
@@ -137,4 +157,30 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+.priceTag{
+  font-size: 2.4em;
+  font-family: 'Lato', sans-serif;
+  color: #07a081;
+}
+.productDetailTitle{
+  font-size: 1.8em;
+  font-family: 'Lato', sans-serif;
+  display: block;
+}
+.priceReviews{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.reviews, .plus{
+  font-size: 1rem;
+}
+
+.buyWithRow img{
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
 }

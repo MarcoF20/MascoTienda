@@ -4,7 +4,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <a href="#" class="navbar-brand">
-      <img src="./images/logo.png" alt="" id="logo" height="33px" width="47px">
+      <img src="../../images/logo.png" alt="" id="logo" height="33px" width="47px">
     </a>
     <a class="navbar-brand" href="#">MascoTienda</a>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">

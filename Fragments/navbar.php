@@ -21,11 +21,11 @@
               Categorías
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Gatos</a></li>
-              <li><a class="dropdown-item" href="#">Peces</a></li>
-              <li><a class="dropdown-item" href="#">Perros</a></li>
-              <li><a class="dropdown-item" href="#">Juguetes</a></li>
-              <li><a class="dropdown-item" href="#">Comida</a></li>
+              <li><a class="dropdown-item" href="../pages/products/category.php">Gatos</a></li>
+              <li><a class="dropdown-item" href="../pages/products/category.php">Peces</a></li>
+              <li><a class="dropdown-item" href="../pages/products/category.php">Perros</a></li>
+              <li><a class="dropdown-item" href="../pages/products/category.php">Juguetes</a></li>
+              <li><a class="dropdown-item" href="../pages/products/category.php">Comida</a></li>
             </ul>
           </div>
         </li>

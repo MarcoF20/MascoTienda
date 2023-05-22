@@ -1,11 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php require("../../Fragments/productHead.php"); ?>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MascoTienda</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="shortcut icon" href="../../images/logo.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cabin&family=Lato:wght@300;400&family=Poppins&display=swap" rel="stylesheet">
+
+</head>
 
 <body>
   <div class="container">
-    <?php require("../../Fragments/productNavbar.php"); ?>
-
+    <nav class="navbar navbar-expand-lg border-bottom">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a href="../../index.php" class="navbar-brand">
+          <img src="../../images/logo.png" alt="" id="logo" height="33px" width="47px">
+        </a>
+        <a class="navbar-brand" href="../../index.php">MascoTienda</a>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item mx-4">
+              <a class="nav-link" aria-current="page" href="../../index.php">Inicio</a>
+            </li>
+            <li class="nav-item mx-4">
+              <a class="nav-link" href="#">Articulos</a>
+            </li>
+            <li class="nav-item mx-4">
+              <div class="dropdown">
+                <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Categorías
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="./category.php">Gatos</a></li>
+                  <li><a class="dropdown-item" href="./category.php">Peces</a></li>
+                  <li><a class="dropdown-item" href="./category.php">Perros</a></li>
+                  <li><a class="dropdown-item" href="./category.php">Juguetes</a></li>
+                  <li><a class="dropdown-item" href="./category.php">Comida</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item mx-4">
+              <a class="nav-link" href="#">Contacto</a>
+            </li>
+          </ul>
+          <form class="d-flex flex-grow-1" role="search">
+            <div class="input_icon">
+              <input class="form-control me-2" type="search" placeholder="Buscar temas" aria-label="Search">
+              <i class="fas fa-search icon"></i>
+            </div>
+          </form>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-5 ms-auto">
+            <li class="nav-item">
+              <a href="./shoppingCart.php" class="nav-link"><i class="fas fa-regular fa-cart-shopping" style="color: #07a081;"></i> Carrito</a>
+            </li>
+            <li class="nav-item mx">
+              <a href="#" class="nav-link"><i class="fas fa-user" style="color:#000000"></i> Perfil</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <div class="container mt-3">
       <div class="row">
         <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">

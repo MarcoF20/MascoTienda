@@ -45,7 +45,16 @@
     <!-- import products fragment -->
     <?php require('./Fragments/products.php') ?>
   </div>
-
+  <footer class="mt-5">
+  <div class="d-flex justify-content-evenly pt-5 border-bottom">
+    <h2>Acerca de</h2>
+    <h2>Soporte</h2>
+    <h2>Contactanos</h2>
+  </div>
+  <div class="d-flex justify-content-center">
+    <p>© 2023. MascoTienda Todos los derechos reservados</p>
+  </div>
+</footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/4b777ceb0e.js" crossorigin="anonymous"></script>
 </body>

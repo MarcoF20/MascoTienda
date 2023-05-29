@@ -17,14 +17,14 @@
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a href="./admin.php" class="navbar-brand">
+      <a href="./adminPage.php" class="navbar-brand">
         <img src="./images/logo.png" alt="" id="logo" height="33px" width="47px">
       </a>
-      <a class="navbar-brand" href="./admin.php">MascoTienda - Administración</a>
+      <a class="navbar-brand" href="./adminPage.php">MascoTienda - Administración</a>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 flex-grow-1">
           <li class="nav-item mx-4">
-            <a class="nav-link" aria-current="page" href="./admin.php">Gestion de productos</a>
+            <a class="nav-link" aria-current="page" href="./adminPage.php">Gestion de productos</a>
           </li>
         </ul>
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-5 ms-auto">

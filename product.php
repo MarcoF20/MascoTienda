@@ -24,14 +24,14 @@
             aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <a href="./index.html" class="navbar-brand">
+          <a href="./index.php" class="navbar-brand">
             <img src="./images/logo.png" alt="" id="logo" height="33px" width="47px">
           </a>
-          <a class="navbar-brand" href="./index.html">MascoTienda</a>
+          <a class="navbar-brand" href="./index.php">MascoTienda</a>
           <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item mx-4">
-                <a class="nav-link" aria-current="page" href="./index.html">Inicio</a>
+                <a class="nav-link" aria-current="page" href="./index.php">Inicio</a>
               </li>
               <li class="nav-item mx-4">
                 <a class="nav-link" href="#">Articulos</a>
@@ -43,11 +43,11 @@
                     Categorías
                   </a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="./category.html">Gatos</a></li>
-                    <li><a class="dropdown-item" href="./category.html">Peces</a></li>
-                    <li><a class="dropdown-item" href="./category.html">Perros</a></li>
-                    <li><a class="dropdown-item" href="./category.html">Juguetes</a></li>
-                    <li><a class="dropdown-item" href="./category.html">Comida</a></li>
+                    <li><a class="dropdown-item" href="./category.php">Gatos</a></li>
+                    <li><a class="dropdown-item" href="./category.php">Peces</a></li>
+                    <li><a class="dropdown-item" href="./category.php">Perros</a></li>
+                    <li><a class="dropdown-item" href="./category.php">Juguetes</a></li>
+                    <li><a class="dropdown-item" href="./category.php">Comida</a></li>
                   </ul>
                 </div>
               </li>
@@ -63,7 +63,7 @@
             </form>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-5 ms-auto">
               <li class="nav-item">
-                <a href="./shoppingCart.html" class="nav-link"><i class="fas fa-regular fa-cart-shopping"
+                <a href="./shoppingCart.php" class="nav-link"><i class="fas fa-regular fa-cart-shopping"
                     style="color: #07a081;"></i> Carrito</a>
               </li>
               <li class="nav-item mx">

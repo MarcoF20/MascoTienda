@@ -19,14 +19,14 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <a href="./index.html" class="navbar-brand">
+        <a href="./index.php" class="navbar-brand">
           <img src="./images/logo.png" alt="" id="logo" height="33px" width="47px">
         </a>
-        <a class="navbar-brand" href="./index.html">MascoTienda</a>
+        <a class="navbar-brand" href="./index.php">MascoTienda</a>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item mx-4">
-              <a class="nav-link" aria-current="page" href="./index.html">Inicio</a>
+              <a class="nav-link" aria-current="page" href="./index.php">Inicio</a>
             </li>
             <li class="nav-item mx-4">
               <a class="nav-link" href="#">Articulos</a>
@@ -37,11 +37,11 @@
                   Categorías
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="./category.html">Gatos</a></li>
-                  <li><a class="dropdown-item" href="./category.html">Peces</a></li>
-                  <li><a class="dropdown-item" href="./category.html">Perros</a></li>
-                  <li><a class="dropdown-item" href="./category.html">Juguetes</a></li>
-                  <li><a class="dropdown-item" href="./category.html">Comida</a></li>
+                  <li><a class="dropdown-item" href="./category.php">Gatos</a></li>
+                  <li><a class="dropdown-item" href="./category.php">Peces</a></li>
+                  <li><a class="dropdown-item" href="./category.php">Perros</a></li>
+                  <li><a class="dropdown-item" href="./category.php">Juguetes</a></li>
+                  <li><a class="dropdown-item" href="./category.php">Comida</a></li>
                 </ul>
               </div>
             </li>
@@ -57,7 +57,7 @@
           </form>
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-5 ms-auto">
             <li class="nav-item">
-              <a href="./shoppingCart.html" class="nav-link"><i class="fas fa-regular fa-cart-shopping" style="color: #07a081;"></i> Carrito</a>
+              <a href="./shoppingCart.php" class="nav-link"><i class="fas fa-regular fa-cart-shopping" style="color: #07a081;"></i> Carrito</a>
             </li>
             <li class="nav-item mx">
               <a href="#" class="nav-link"><i class="fas fa-user" style="color:#000000"></i> Perfil</a>
@@ -148,7 +148,7 @@
                 <div class="card-body text-center">
                   <h5 class="card-title">Barkers Club Health Omega Carnaza en Forma de Palitos para Perro Receta de Res, 25 Piezas</h5>
                   <p class="card-text">$65.00</p>
-                  <a href="./product.html" class="btn btn-primary">Ver mas</a>
+                  <a href="./product.php" class="btn btn-primary">Ver mas</a>
                 </div>
               </div>
             </div>
@@ -158,7 +158,7 @@
                 <div class="card-body text-center">
                   <h5 class="card-title">Royal Canin Alimento Húmedo para Perro Adulto Todas las Razas Receta Pollo, 385 g</h5>
                   <p class="card-text">$95.00</p>
-                  <a href="./product.html" class="btn btn-primary">Ver mas</a>
+                  <a href="./product.php" class="btn btn-primary">Ver mas</a>
                 </div>
               </div>
             </div>
@@ -170,7 +170,7 @@
                 <div class="card-body text-center">
                   <h5 class="card-title">Royal Canin Alimento Seco para Perro Adulto Raza Mediana, 13.6 kg</h5>
                   <p class="card-text">$2007.00</p>
-                  <a href="./product.html" class="btn btn-primary">Ver mas</a>
+                  <a href="./product.php" class="btn btn-primary">Ver mas</a>
                 </div>
               </div>
             </div>
@@ -180,7 +180,7 @@
                 <div class="card-body text-center">
                   <h5 class="card-title">Pro Plan Optihealth Alimento Seco para Perro Adulto Raza Mediana Receta Pollo y Arroz, 13 kg</h5>
                   <p class="card-text">$1622.00</p>
-                  <a href="./product.html" class="btn btn-primary">Ver mas</a>
+                  <a href="./product.php" class="btn btn-primary">Ver mas</a>
                 </div>
               </div>
             </div>

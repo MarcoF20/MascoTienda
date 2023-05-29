@@ -17,6 +17,18 @@
   </head>
 
   <body>
+    <?php
+      $user = 'root';
+      $password = '';
+      $db = 'mascotienda';
+      $host = 'localhost';
+      $port = 3306;
+      $conn = new mysqli($host, $user, $password, $db, $port);
+      $id = $_GET['id'];
+      $sql = "SELECT * FROM productos where id_producto = '$id'";
+      $result = $conn->query($sql);
+      $row = $result->fetch_assoc();
+    ?>
     <div class="container">
       <nav class="navbar navbar-expand-lg border-bottom">
         <div class="container-fluid">
@@ -87,16 +99,16 @@
         <div class="row">
           <div class="col-md-6">
             <div class="aspect-ratio-container aspect-ratio-16-9">
-              <img src="./images/carnazas perro.jpeg" alt="" class="aspect-ratio-content img-fluid"
+              <img src="<?php echo $row['foto']?>" alt="" class="aspect-ratio-content img-fluid"
                 style="border-radius: 22px;">
             </div>
           </div>
           <div class="col-md-6">
             <div class="descriptionContainer">
-              <h2 class="mb-4">Barkers Club Health Omega Carnaza en Forma de Palitos para Perro Receta de Res, 25 Piezas
+              <h2 class="mb-4"><?php echo $row['nombre']?>
               </h2>
               <div class="priceReviews">
-                <span class="priceTag">$65.00</span>
+                <span class="priceTag">$<?php echo $row['precio']?></span>
                 <div class="reviews">
                   <i class="fa-solid fa-star" style="color: #FFDF00;"></i>
                   <i class="fa-solid fa-star" style="color: #FFDF00;"></i>
@@ -106,14 +118,8 @@
                 </div>
               </div>
               <span class="productDetailTitle">Acerca de este articulo</span>
-              <p class="text-muted" style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing
-                elit. Sed vitae ex id quam efficitur congue. Nulla facilisi. Phasellus id felis dapibus, sodales mauris
-                ut, tempus ipsum.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur saepe eligendi laborum soluta,
-                cupiditate repellat nostrum esse consequatur? Ut ab vitae obcaecati assumenda, similique eius asperiores
-                commodi exercitationem id at?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo iste,
-                perferendis cupiditate repellendus animi temporibus est reiciendis aut quae corrupti dignissimos eius!
-                Eos alias consequuntur laborum atque voluptatibus. Quos, non.
+              <p class="text-muted" style="text-align: justify;">
+                <?php echo $row['descripcion']?>
               </p>
               <div class="d-flex justify-content-start">
                 <button class="btn btn-primary send-form">Agregar al carrito</button>

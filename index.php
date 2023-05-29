@@ -12,10 +12,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cabin&family=Lato:wght@300;400&family=Poppins&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <!-- Importing navigation bar -->
   <div class="container">
-    
+
     <nav class="navbar navbar-expand-lg border-bottom">
       <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
@@ -100,12 +101,40 @@
       </div>
     </div>
     <h2 class="content_title text-center mt-5">Todos los productos</h2>
-  
+
     <!-- PRODUCTOS -->
     <!-- import products fragment -->
     <div class="container mt-3" id="productRowContainer">
       <div class="row d-flex" id="products_row">
-        <div class="col-3">
+        <?php
+        $user = 'root';
+        $password = '';
+        $db = 'mascotienda';
+        $host = 'localhost';
+        $port = 3306;
+        $conn = new mysqli($host, $user, $password, $db, $port);
+        if ($conn->connect_error) {
+          die('Connection failed: ' . $conn->connect_error);
+        }
+        $sql = 'SELECT * FROM productos';
+        $result = $conn->query($sql);
+        while ($row = $result->fetch_assoc()) {
+          echo ('<div  class="col-3">
+            <div class="card" style="width: 18rem;">
+              <img src="' . $row["foto"] . '" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <h5 class="card-title">' . $row["nombre"] . '</h5>
+                <p class="card-text">$' . $row["precio"] . '</p>
+                <form method="get" action="./product.php">
+                  <input type="hidden" name="id" value="' . $row["id_producto"] . '">
+                  <button type="submit" class="btn btn-primary">Ver mas</button>
+                </form>
+              </div>
+            </div>
+          </div>');
+        }
+        ?>
+        <!-- <div class="col-3">
           <div class="card" style="width: 18rem;">
             <img src="./images/carnazas perro.jpeg" class="card-img-top" alt="...">
             <div class="card-body text-center">
@@ -144,20 +173,20 @@
               <a href="./product.php" class="btn btn-primary">Ver mas</a>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
   <footer class="mt-5">
-  <div class="d-flex justify-content-evenly pt-5 border-bottom">
-    <h2>Acerca de</h2>
-    <h2>Soporte</h2>
-    <h2>Contactanos</h2>
-  </div>
-  <div class="d-flex justify-content-center">
-    <p>© 2023. MascoTienda Todos los derechos reservados</p>
-  </div>
-</footer>
+    <div class="d-flex justify-content-evenly pt-5 border-bottom">
+      <h2>Acerca de</h2>
+      <h2>Soporte</h2>
+      <h2>Contactanos</h2>
+    </div>
+    <div class="d-flex justify-content-center">
+      <p>© 2023. MascoTienda Todos los derechos reservados</p>
+    </div>
+  </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/4b777ceb0e.js" crossorigin="anonymous"></script>
 </body>

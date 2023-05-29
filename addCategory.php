@@ -18,14 +18,14 @@
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a href="./admin.php" class="navbar-brand">
+      <a href="./adminPage.php" class="navbar-brand">
         <img src="./images/logo.png" alt="" id="logo" height="33px" width="47px">
       </a>
-      <a class="navbar-brand" href="./admin.php">MascoTienda - Administración</a>
+      <a class="navbar-brand" href="./adminPage.php">MascoTienda - Administración</a>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 flex-grow-1">
           <li class="nav-item mx-4">
-            <a class="nav-link" aria-current="page" href="./admin.php">Gestion de productos</a>
+            <a class="nav-link" aria-current="page" href="./adminPage.php">Gestion de productos</a>
           </li>
         </ul>
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-5 ms-auto">
@@ -50,7 +50,7 @@
     </div>
   </div>
 <div class="formContainer d-flex justify-content-center">
-<form style="min-width: 406px;" class="mt-3">
+<form style="min-width: 406px;" class="mt-3" method="post">
   <div class="mb-3 vstack gap-2">
     <label for="categoryName" class="form-label">Nombre de la categoría</label>
     <input type="text" class="form-control" id="category_name" aria-describedby="categoryNameHelp" name="categoryName">
@@ -58,6 +58,31 @@
   <button type="submit" class="btn btn-primary send-form">Añadir categoría</button>
 </form>
 </div>
+<?php
+  $user = 'root';
+  $password = '';
+  $db = 'mascotienda';
+  $host = 'localhost';
+  $port = 3306;
+  $conn = new mysqli($host, $user, $password, $db, $port);
+  if ($conn->connect_error) {
+    die('Connection failed: ' . $conn->connect_error);
+  }
+  if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $categoryName = $_POST['categoryName'];
+    $sql = "INSERT INTO categorias (nombre) VALUES ('$categoryName')";
+    if ($conn->query($sql) === TRUE) {
+      echo '<div class="alert alert-success mt-3 text-center" role="alert" style="font-size: 1.6rem">
+      Categoría añadida correctamente
+    </div>';
+    } else {
+      echo '<div class="alert alert-danger mt-3 text-center" role="alert" style="font-size: 1.6rem>
+      Error al añadir la categoría
+    </div>';
+    }
+  }
+  $conn->close();
+?>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/4b777ceb0e.js" crossorigin="anonymous"></script>

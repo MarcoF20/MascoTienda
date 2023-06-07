@@ -51,7 +51,6 @@ CREATE TABLE categorias (
   nombre VARCHAR(50)
 );
 
--- Tabla intermedia productos_categorias
 CREATE TABLE productos_categorias (
   id_producto_categoria INT PRIMARY KEY AUTO_INCREMENT,
   id_producto INT,
@@ -59,7 +58,6 @@ CREATE TABLE productos_categorias (
   FOREIGN KEY (id_producto) REFERENCES productos(id_producto),
   FOREIGN KEY (id_categoria) REFERENCES categorias(id_categoria)
 );
--- Crea una tabla de carrito sin cliente
 CREATE TABLE carrito (
   id_carrito INT PRIMARY KEY AUTO_INCREMENT,
   id_producto INT,

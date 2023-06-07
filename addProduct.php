@@ -121,7 +121,6 @@
         echo '<div class="alert alert-success mt-3 text-center" role="alert" style="font-size: 1.6rem">
         Producto añadido correctamente
       </div>';
-        //get the id from the product you just added by codigo_producto
         $sql2 = "SELECT id_producto FROM productos WHERE codigo_producto = '$sku'";
         $result = $conn->query($sql2);
         $row = $result->fetch_assoc();

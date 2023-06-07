@@ -14,18 +14,16 @@ $checkout_session = \Stripe\Checkout\Session::create([
     [
       'price_data' => [
         'currency' => 'mxn',
-        'unit_amount' => $totalPrice+00,  // Precio en centavos ($19.99)
+        'unit_amount' => $totalPrice+00,
         'product_data' => [
           'name' => 'Pedido de MascoTienda',
           'description' => 'Tu pedido de MascoTienda',
-          // Otros campos de información del producto 1
         ],
       ],
-      'quantity' => 1,  // Cantidad del producto 1
+      'quantity' => 1,  
     ],
 
     
-    // Agrega más elementos para más productos si es necesario
   ],
   
   'mode' => 'payment',

@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>MascoTienda</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cabin&family=Lato:wght@300;400&family=Poppins&display=swap" rel="stylesheet">
-    
-  </head>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MascoTienda</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <script src="https://js.stripe.com/v3/"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cabin&family=Lato:wght@300;400&family=Poppins&display=swap" rel="stylesheet">
+
+</head>
+
 <body>
   <div class="container">
     <nav class="navbar navbar-expand-lg border-bottom">
@@ -65,57 +68,60 @@
           </ul>
         </div>
       </div>
-    </nav>    <div class="container mt-3">
-      <h2 class="content_title">Carrito de compras</h2>
-      <div class="row" id="shopingContainer">
+    </nav>
+  </div>
+  <div class="container mt-3">
+    <h2 class="content_title">Carrito de compras</h2>
+    <form action="./checkout.php" method="post">
+
+      <?php
+      $user = 'root';
+      $password = '';
+      $db = 'mascotienda';
+      $host = 'localhost';
+      $port = 3306;
+      $conn = new mysqli($host, $user, $password, $db, $port);
+      $sql = "SELECT * FROM carrito INNER JOIN productos ON carrito.id_producto = productos.id_producto";
+      $result = $conn->query($sql);
+      while ($rowCarrito = $result->fetch_assoc()) {
+        if ($result->num_rows > 0) {
+          echo ('
+        <div class="row" id="shopingContainer">
+        <div class="col-3">
+        <img src="' . $rowCarrito["foto"] . '" alt="imagen del producto" class="img-fluid">
+        </div>
           <div class="col-3">
-            <img src="./images/carnazas perro.jpeg" alt="imagen del producto" class="img-fluid">
+            <h4>' . $rowCarrito["nombre"] . '</h4>
           </div>
           <div class="col-3">
-            <h4>Barkers Club Health Omega Carnaza en Forma de Palitos para Perro Receta de Res, 25 Piezas</h4>
-          </div>
-          <div class="col-3"> <select name="" id="" class="form-select">
-              <option value="">1</option>
-              <option value="">2</option>
-              <option value="">3</option>
-              <option value="">4</option>
-              <option value="">5</option>
-              <option value="">6</option>
-              <option value="">7</option>
-              <option value="">8</option>
-              <option value="">9</option>
-              <option value="">10</option>
-            </select></div>
-          <div class="col-3">
-            <h4>$65.00</h4>
-          </div>
-      </div>
-      <div class="row" id="shopingContainer">
-          <div class="col-3">
-            <img src="./images/comida en latada perro.jpeg" alt="imagen del producto" class="img-fluid">
+          <select name="cantidad" id="" class="form-select">
+          <option value="1" ' . ($rowCarrito["cantidad"] == 1 ?  "selected" :  "") . '>1</option>
+          <option value="2" ' . ($rowCarrito["cantidad"] == 2 ? 'selected' : '') . '>2</option>
+          <option value="3" ' . ($rowCarrito["cantidad"] == 3 ? 'selected' : '') . '>3</option>
+          <option value="4" ' . ($rowCarrito["cantidad"] == 4 ? 'selected' : '') . '>4</option>
+          <option value="5" ' . ($rowCarrito["cantidad"] == 5 ? 'selected' : '') . '>5</option>
+          <option value="6" ' . ($rowCarrito["cantidad"] == 6 ? 'selected' : '') . '>6</option>
+          <option value="7" ' . ($rowCarrito["cantidad"] == 7 ? 'selected' : '') . '>7</option>
+          <option value="8" ' . ($rowCarrito["cantidad"] == 8 ? 'selected' : '') . '>8</option>
+          <option value="9" ' . ($rowCarrito["cantidad"] == 9 ? 'selected' : '') . '>9</option>
+          <option value="10" ' . ($rowCarrito["cantidad"] == 10 ? 'selected' : '') . '>10</option>
+          </select>
           </div>
           <div class="col-3">
-            <h4>Royal Canin Alimento Húmedo para Perro Adulto Todas las Razas Receta Pollo, 385 g</h4>
+          <h4 class="productPrice">' . $rowCarrito["precio"] . '</h4>
           </div>
-          <div class="col-3"> <select name="" id="" class="form-select">
-              <option value="">1</option>
-              <option value="">2</option>
-              <option value="">3</option>
-              <option value="">4</option>
-              <option value="">5</option>
-              <option value="">6</option>
-              <option value="">7</option>
-              <option value="">8</option>
-              <option value="">9</option>
-              <option value="">10</option>
-            </select></div>
-          <div class="col-3">
-            <h4>$95.00</h4>
           </div>
-      </div>
-      <h4 class="text-end">Total $160</h4>
-      <button class="btn btn-primary send-form">Proceder al pago</button>
-    </div>
+          ');
+        } else {
+          echo "Tu carrito esta vacio";
+        }
+      }
+      ?>
+      <h4 class="text-end" id="total"></h4>
+      <input type="hidden" name="totalPrice">
+      <button class="btn btn-primary send-form" id="checkout" type="submit">Proceder al pago</button>
+    </form>
+
   </div>
   <footer class="mt-5">
     <div class="d-flex justify-content-evenly pt-5 border-bottom">
@@ -127,9 +133,9 @@
       <p>© 2023. MascoTienda Todos los derechos reservados</p>
     </div>
   </footer>
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/4b777ceb0e.js" crossorigin="anonymous"></script>
+  <script src="./app.js"></script>
 </body>
 
 </html>

@@ -35,7 +35,7 @@ CREATE TABLE direcciones (
 );
 -- Tabla de productos
 CREATE TABLE productos (
-  id_producto INT PRIMARY KEY,
+  id_producto INT PRIMARY KEY AUTO_INCREMENT,
   nombre VARCHAR(100),
   marca VARCHAR(50),
   precio DECIMAL(10, 2),
@@ -47,15 +47,22 @@ CREATE TABLE productos (
 
 -- Tabla de categorías
 CREATE TABLE categorias (
-  id_categoria INT PRIMARY KEY,
+  id_categoria INT PRIMARY KEY AUTO_INCREMENT,
   nombre VARCHAR(50)
 );
 
 -- Tabla intermedia productos_categorias
 CREATE TABLE productos_categorias (
-  id_producto_categoria INT PRIMARY KEY,
+  id_producto_categoria INT PRIMARY KEY AUTO_INCREMENT,
   id_producto INT,
   id_categoria INT,
   FOREIGN KEY (id_producto) REFERENCES productos(id_producto),
   FOREIGN KEY (id_categoria) REFERENCES categorias(id_categoria)
+);
+-- Crea una tabla de carrito sin cliente
+CREATE TABLE carrito (
+  id_carrito INT PRIMARY KEY AUTO_INCREMENT,
+  id_producto INT,
+  cantidad INT,
+  FOREIGN KEY (id_producto) REFERENCES productos(id_producto)
 );
